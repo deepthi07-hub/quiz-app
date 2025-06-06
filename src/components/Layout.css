@@ -1,0 +1,23 @@
+.layout-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  width: 100%; /* Ensure full width in smaller screens */
+}
+
+/* Tablet size (max-width: 768px) */
+@media (max-width: 768px) {
+  .layout-container {
+    padding: 1rem; /* Slightly reduced padding for tablet screens */
+    width: 100%; /* Full width on tablet devices */
+  }
+}
+
+/* Mobile size (max-width: 480px) */
+@media (max-width: 480px) {
+  .layout-container {
+    padding: 0.75rem; /* Even smaller padding for mobile screens */
+    width: 100%; /* Full width on mobile devices */
+  }
+}

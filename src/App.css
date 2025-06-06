@@ -1,0 +1,214 @@
+/* Root container */
+#root {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fbff;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* App logo */
+.logo {
+  height: 120px;
+  margin-bottom: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Spinning logo (optional) */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo.spin {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Start screen styling */
+.start-screen {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  width: 100%; /* Ensure it fills the container */
+  box-sizing: border-box;
+}
+
+/* Intro text styling */
+.intro-text {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+/* Instructions list styling */
+.instructions ul {
+  text-align: left;
+  margin: 0 auto 20px;
+  padding: 0;
+  list-style: none;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.instructions li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.instructions li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Default Button styling */
+button {
+  padding: 10px 24px;
+  font-size: 16px;
+  border: none;
+  background-color: #3f51b5;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2c3e90;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Override for specific buttons: make text black */
+.black-text-button {
+  color: black !important;
+}
+
+/* Light blue border button (used in Home screen) */
+.light-blue-border-button {
+  background-color: white;
+  color: black;
+  border: 2px solid #87cefa; /* Light blue */
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.light-blue-border-button:hover {
+  background-color: #e6f4ff;
+  border-color: #5ab6f9;
+}
+
+/* Card & Footer (optional) */
+.card {
+  padding: 2em;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.read-the-docs {
+  color: #888;
+  margin-top: 2rem;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #root {
+    padding: 1.5rem; /* Reduced padding for smaller screens */
+  }
+
+  .logo {
+    height: 100px; /* Slightly smaller logo on smaller screens */
+  }
+
+  .start-screen {
+    padding: 20px; /* Reduced padding */
+  }
+
+  .intro-text {
+    font-size: 16px; /* Slightly smaller intro text */
+  }
+
+  .instructions ul {
+    max-width: 100%; /* Make instructions list full width on small screens */
+  }
+
+  .instructions li {
+    font-size: 14px; /* Smaller font size for list items */
+  }
+
+  button {
+    width: 100%; /* Buttons take full width on mobile */
+    padding: 12px;
+    font-size: 14px; /* Smaller font size on mobile */
+  }
+
+  .card {
+    padding: 1.5em; /* Reduced padding on smaller screens */
+  }
+}
+
+/* Mobile-first Styles (max-width: 480px) */
+@media (max-width: 480px) {
+  #root {
+    padding: 1rem; /* Even less padding for extra small screens */
+  }
+
+  .logo {
+    height: 90px; /* Smaller logo for very small screens */
+  }
+
+  .start-screen {
+    padding: 15px; /* Even less padding */
+  }
+
+  .intro-text {
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .instructions li {
+    font-size: 12px; /* Even smaller text for very small screens */
+  }
+
+  button {
+    padding: 14px;
+    font-size: 14px; /* Button padding and font-size adjustments */
+  }
+
+  .card {
+    padding: 1.2em; /* Reduced padding */
+  }
+
+  .read-the-docs {
+    font-size: 12px; /* Smaller text for footer */
+  }
+}
